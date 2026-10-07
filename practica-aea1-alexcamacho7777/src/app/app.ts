@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Videojoc } from '../interfaces/videojoc';
+import { Videojoc } from './interfaces/videojoc';
 
 @Component({
   selector: 'app-root',
