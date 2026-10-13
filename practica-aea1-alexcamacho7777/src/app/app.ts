@@ -1,10 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Videojoc } from './interfaces/videojoc';
+import { Estadistiques } from './components/Estadistiques/estadistiques';
+import { Tarjeta } from './components/Tarjeta/tarjeta';
+import { Capçalera } from './components/Capçalera/capçalera';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [Estadistiques, Tarjeta, Capçalera],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -20,7 +23,7 @@ videojocs: Videojoc[] = [
     puntuacio: 9.5,
     disponible: true,
     plataforma: 'PC, Consoles',
-    anyLlançament: 2011,
+    anyLlancament: 2011,
     imatgeUrl: ''
   },
   {
@@ -30,7 +33,7 @@ videojocs: Videojoc[] = [
     puntuacio: 8.5,
     plataforma: 'PC, Consoles',
     disponible: true,
-    anyLlançament: 2026,
+    anyLlancament: 2026,
     imatgeUrl: ''
   },
   {
@@ -40,7 +43,7 @@ videojocs: Videojoc[] = [
     puntuacio: 9.3,
     plataforma: 'PC, Consoles',
     disponible: true,
-    anyLlançament: 2013,
+    anyLlancament: 2013,
     imatgeUrl: ''
   },
   {
@@ -50,7 +53,7 @@ videojocs: Videojoc[] = [
     puntuacio: 9.8,
     plataforma: 'Consoles',
     disponible: false,
-    anyLlançament: 2023,
+    anyLlancament: 2023,
     imatgeUrl: ''
   },
   {
@@ -60,7 +63,7 @@ videojocs: Videojoc[] = [
     puntuacio: 8.7,
     plataforma: 'PC, Consoles',
     disponible: true,
-    anyLlançament: 2015,
+    anyLlancament: 2015,
     imatgeUrl: ''
   },
   {
@@ -70,7 +73,7 @@ videojocs: Videojoc[] = [
     puntuacio: 9.7,
     plataforma: 'PC, Consoles',
     disponible: false,
-    anyLlançament: 2018,
+    anyLlancament: 2018,
     imatgeUrl: ''
   }
 ];

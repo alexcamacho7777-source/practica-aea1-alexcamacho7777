@@ -7,6 +7,6 @@ export interface Videojoc {
   puntuacio: number;
   disponible: boolean;
   plataforma: string;
-  anyLlançament: number;
+  anyLlancament: number;
   imatgeUrl: string;
 }
