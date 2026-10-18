@@ -1,6 +1,12 @@
-
 main {
   max-width: 1000px;
   margin: 30px auto;
   padding: 10px;
+}
+
+.llista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
 }

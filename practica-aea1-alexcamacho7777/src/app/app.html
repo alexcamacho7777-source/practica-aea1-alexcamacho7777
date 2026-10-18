@@ -1,9 +1,10 @@
-
-<app-capcalera></app-capcalera>
+<app-capcalera />
 <main>
-  <app-tarjeta></app-tarjeta>
-  <app-tarjeta></app-tarjeta>
-  <app-tarjeta></app-tarjeta>
+  <section class="llista">
+    @for (joc of videojocs; track joc.nom) {
+      <app-tarjeta [videojoc]="joc" />
+    }
+  </section>
 
-  <app-estadistiques></app-estadistiques>
+  <app-estadistiques [videojocs]="videojocs" />
 </main>
