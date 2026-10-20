@@ -1,9 +1,10 @@
 
 <app-capcalera></app-capcalera>
-<main>
-  <app-tarjeta></app-tarjeta>
-  <app-tarjeta></app-tarjeta>
-  <app-tarjeta></app-tarjeta>
 
-  <app-estadistiques></app-estadistiques>
-</main>
+<h1>Catàleg de videojocs</h1>
+
+<div class="contenidor-jocs">
+  @for (joc of videojocs; track joc.nom) {
+    <app-tarjeta [videojoc]="joc"></app-tarjeta>
+  }
+</div>

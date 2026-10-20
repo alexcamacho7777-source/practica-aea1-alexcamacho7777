@@ -4,3 +4,15 @@ main {
   margin: 30px auto;
   padding: 10px;
 }
+
+.contenidor-jocs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contenidor-jocs app-tarjeta {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
