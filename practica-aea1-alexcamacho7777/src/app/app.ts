@@ -22,7 +22,7 @@ export class App {
       disponible: true,
       plataforma: 'PC, Consoles',
       anyLlancament: 2011,
-      imatgeUrl: '',
+      imatgeUrl: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Minecraft_Classic_screenshot.jpg',
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2026,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/2669320/header.jpg',
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2013,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg',
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ export class App {
       plataforma: 'Consoles',
       disponible: false,
       anyLlancament: 2023,
-      imatgeUrl: '',
+      imatgeUrl: 'https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg',
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2015,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg',
     },
     {
       id: 6,
@@ -77,7 +77,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: false,
       anyLlancament: 2018,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
     },
   ];
 }
