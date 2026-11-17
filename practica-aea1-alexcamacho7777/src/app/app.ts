@@ -21,7 +21,7 @@ export class App {
       disponible: true,
       plataforma: 'PC, Consoles',
       anyLlancament: 2011,
-      imatgeUrl: '',
+      imatgeUrl: 'https://placehold.co/460x215/png?text=Minecraft',
     },
     {
       nom: 'EA Sports FC 27',
@@ -31,7 +31,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2026,
-      imatgeUrl: '',
+      imatgeUrl: 'https://placehold.co/460x215/png?text=EA+Sports+FC+27',
     },
     {
       nom: 'Grand Theft Auto V',
@@ -41,7 +41,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2013,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg',
     },
     {
       nom: 'The Legend of Zelda',
@@ -51,7 +51,7 @@ export class App {
       plataforma: 'Consoles',
       disponible: false,
       anyLlancament: 2023,
-      imatgeUrl: '',
+      imatgeUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg',
     },
     {
       nom: 'Rocket League',
@@ -61,7 +61,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2015,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg',
     },
     {
       nom: 'Red Dead Redemption 2',
@@ -71,7 +71,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: false,
       anyLlancament: 2018,
-      imatgeUrl: '',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg',
     },
   ];
 }

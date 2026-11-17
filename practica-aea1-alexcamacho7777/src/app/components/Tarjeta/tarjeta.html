@@ -1,14 +1,15 @@
 <div class="tarjeta">
-  <h2>{{ videojoc().nom }}</h2>
+  <img [src]="videojoc.imatgeUrl" [alt]="videojoc.nom" />
+  <h2>{{ videojoc.nom }}</h2>
 
-  <p>Gènere: {{ videojoc().genere }}</p>
-  <p>Plataforma: {{ videojoc().plataforma }}</p>
-  <p>Preu: {{ preuText() }}</p>
-  <p>Puntuació: {{ videojoc().puntuacio }}/10</p>
-  <p [class.disponible]="videojoc().disponible" [class.no-disponible]="!videojoc().disponible">
-    Estat: {{ estat() }}
+  <p>Gènere: {{ videojoc.genere }}</p>
+  <p>Plataforma: {{ videojoc.plataforma }}</p>
+  <p>Preu: {{ preuText }}</p>
+  <p>Puntuació: {{ videojoc.puntuacio }}/10</p>
+  <p [class.disponible]="videojoc.disponible" [class.no-disponible]="!videojoc.disponible">
+    Estat: {{ estat }}
   </p>
-  <p>Any de llançament: {{ videojoc().anyLlancament }}</p>
-  <p>Preu amb IVA: {{ preuAmbIVA() }} €</p>
-  <p>{{ etiqueta() }}</p>
+  <p>Any de llançament: {{ videojoc.anyLlancament }}</p>
+  <p>Preu amb IVA: {{ preuAmbIVA }} €</p>
+  <p>{{ etiqueta }}</p>
 </div>
