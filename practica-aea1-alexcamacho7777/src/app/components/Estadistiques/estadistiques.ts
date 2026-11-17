@@ -10,6 +10,7 @@ export class Estadistiques {
   // L1: les dades estan hardcodejades dins del propi component.
   videojocs: Videojoc[] = [
     {
+      id: 1,
       nom: 'Minecraft',
       genere: 'Supervivència',
       preu: 29.99,
@@ -20,6 +21,7 @@ export class Estadistiques {
       imatgeUrl: 'https://placehold.co/460x215/png?text=Minecraft',
     },
     {
+      id: 3,
       nom: 'Grand Theft Auto V',
       genere: 'Acció',
       preu: 29.99,
@@ -30,6 +32,7 @@ export class Estadistiques {
       imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg',
     },
     {
+      id: 4,
       nom: 'The Legend of Zelda',
       genere: 'Aventura',
       preu: 59.99,

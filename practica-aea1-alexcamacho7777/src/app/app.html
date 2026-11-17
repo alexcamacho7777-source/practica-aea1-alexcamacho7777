@@ -1,9 +1,22 @@
 <app-capcalera />
 <main>
   <section class="llista">
-    <app-tarjeta />
-    <app-tarjeta />
-    <app-tarjeta />
+    <!-- track joc.id: Angular identifica cada element pel seu id -->
+    @for (joc of videojocs; track joc.id; let i = $index; let primer = $first; let ultim = $last) {
+      <article class="element" [class.primer]="primer" [class.ultim]="ultim">
+        <p class="ordre">
+          #{{ i + 1 }} de {{ videojocs.length }}
+          @if (primer) {
+            <span> 🥇 Primer</span>
+          }
+          @if (ultim) {
+            <span> 🏁 Últim</span>
+          }
+        </p>
+        <!-- Part 3: totes les targetes mostren el mateix fins a la Part 5 (@Input) -->
+        <app-tarjeta />
+      </article>
+    }
   </section>
 
   <app-estadistiques />

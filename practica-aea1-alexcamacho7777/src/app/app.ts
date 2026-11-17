@@ -14,6 +14,7 @@ export class App {
   // Definir els Videojocs amb les dades hardcodejades
   videojocs: Videojoc[] = [
     {
+      id: 1,
       nom: 'Minecraft',
       genere: 'Supervivència',
       preu: 29.99,
@@ -24,6 +25,7 @@ export class App {
       imatgeUrl: 'https://placehold.co/460x215/png?text=Minecraft',
     },
     {
+      id: 2,
       nom: 'EA Sports FC 27',
       genere: 'Esports',
       preu: 79.99,
@@ -34,6 +36,7 @@ export class App {
       imatgeUrl: 'https://placehold.co/460x215/png?text=EA+Sports+FC+27',
     },
     {
+      id: 3,
       nom: 'Grand Theft Auto V',
       genere: 'Acció',
       preu: 29.99,
@@ -44,6 +47,7 @@ export class App {
       imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg',
     },
     {
+      id: 4,
       nom: 'The Legend of Zelda',
       genere: 'Aventura',
       preu: 59.99,
@@ -54,6 +58,7 @@ export class App {
       imatgeUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg',
     },
     {
+      id: 5,
       nom: 'Rocket League',
       genere: 'Esports',
       preu: 0,
@@ -64,6 +69,7 @@ export class App {
       imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg',
     },
     {
+      id: 6,
       nom: 'Red Dead Redemption 2',
       genere: 'Acció',
       preu: 39.99,

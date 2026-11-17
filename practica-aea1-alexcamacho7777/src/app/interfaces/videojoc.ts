@@ -1,6 +1,8 @@
 // Interfície Videojoc: representa cada videojoc del catàleg i les seves propietats.
 
 export interface Videojoc {
+  // Identificador únic del videojoc (number), usat a track de @for
+  id: number;
   // Nom del videojoc (string)
   nom: string;
   // Gènere principal del joc: acció, aventura, esports... (string)

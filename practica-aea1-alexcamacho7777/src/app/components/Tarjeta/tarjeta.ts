@@ -9,6 +9,7 @@ import { Videojoc } from '../../interfaces/videojoc';
 export class Tarjeta {
   // L1: les dades estan hardcodejades dins del propi component.
   videojoc: Videojoc = {
+    id: 1,
     nom: 'Minecraft',
     genere: 'Supervivència',
     preu: 29.99,
