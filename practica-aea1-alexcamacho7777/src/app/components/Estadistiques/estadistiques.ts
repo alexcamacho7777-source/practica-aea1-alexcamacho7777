@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Videojoc } from '../../interfaces/videojoc';
 
 @Component({
@@ -7,43 +7,8 @@ import { Videojoc } from '../../interfaces/videojoc';
   styleUrl: './estadistiques.css',
 })
 export class Estadistiques {
-  // L1: les dades estan hardcodejades dins del propi component.
-  videojocs: Videojoc[] = [
-    {
-      id: 1,
-      nom: 'Minecraft',
-      genere: 'Supervivència',
-      preu: 29.99,
-      puntuacio: 9.5,
-      disponible: true,
-      plataforma: 'PC, Consoles',
-      anyLlancament: 2011,
-      imatgeUrl: 'https://placehold.co/460x215/png?text=Minecraft',
-    },
-    {
-      id: 3,
-      nom: 'Grand Theft Auto V',
-      genere: 'Acció',
-      preu: 29.99,
-      puntuacio: 9.3,
-      disponible: true,
-      plataforma: 'PC, Consoles',
-      anyLlancament: 2013,
-      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg',
-    },
-    {
-      id: 4,
-      nom: 'The Legend of Zelda',
-      genere: 'Aventura',
-      preu: 59.99,
-      puntuacio: 9.8,
-      disponible: false,
-      plataforma: 'Consoles',
-      anyLlancament: 2023,
-      imatgeUrl:
-        'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg',
-    },
-  ];
+  // Part 5: llista de videojocs que rep del component pare.
+  @Input() videojocs: Videojoc[] = [];
 
   // Retorna quants videojocs hi ha al catàleg.
   get totalVideojocs(): number {

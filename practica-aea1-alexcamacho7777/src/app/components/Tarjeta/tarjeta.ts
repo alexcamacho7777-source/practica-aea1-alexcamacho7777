@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Videojoc } from '../../interfaces/videojoc';
 
 @Component({
@@ -7,18 +7,16 @@ import { Videojoc } from '../../interfaces/videojoc';
   styleUrl: './tarjeta.css',
 })
 export class Tarjeta {
-  // L1: les dades estan hardcodejades dins del propi component.
-  videojoc: Videojoc = {
-    id: 1,
-    nom: 'Minecraft',
-    genere: 'Supervivència',
-    preu: 29.99,
-    puntuacio: 9.5,
-    disponible: true,
-    plataforma: 'PC, Consoles',
-    anyLlancament: 2011,
-    imatgeUrl: 'https://placehold.co/460x215/png?text=Minecraft',
-  };
+  // Part 5: el pare passa el videojoc amb property binding [videojoc]="joc".
+  @Input() videojoc!: Videojoc;
+
+  // Part 5: el fill avisa el pare quan l'usuari prem el botó de detall.
+  @Output() videojocSeleccionat = new EventEmitter<Videojoc>();
+
+  // Emet el videojoc d'aquesta targeta cap al component pare.
+  seleccionar(): void {
+    this.videojocSeleccionat.emit(this.videojoc);
+  }
 
   // Retorna el preu amb el símbol de l'euro.
   get preuText(): string {

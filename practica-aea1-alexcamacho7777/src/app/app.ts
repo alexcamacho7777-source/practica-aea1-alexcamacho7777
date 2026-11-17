@@ -80,4 +80,17 @@ export class App {
       imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg',
     },
   ];
+
+  // Videojoc seleccionat per l'usuari (null si no n'hi ha cap)
+  videojocSeleccionat: Videojoc | null = null;
+
+  // Part 5: s'executa quan el fill emet l'event videojocSeleccionat.
+  onVideojocSeleccionat(joc: Videojoc): void {
+    this.videojocSeleccionat = joc;
+  }
+
+  // Tanca la secció de detall.
+  tancarDetall(): void {
+    this.videojocSeleccionat = null;
+  }
 }
