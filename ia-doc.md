@@ -31,13 +31,13 @@ ChatGPT ha servit com a eina d'ajuda per entendre Angular, corregir errors i mos
 
 ## Correccions de L1 (revisió de la professora)
 - He usat IA? Sí (Kiro, assistent d'IA integrat a l'editor).
-- Prompt: "Compara amb el Lliurament 1 i corregeix amb la revisió" (adjuntant el comentari de la professora).
+- Prompt: "Necessito corregir algunes coses a partir de la revisió que m'ha fet la professora." (adjuntant el comentari de la professora).
 - Part usada directament: tornar als getters (sense signals ni computed), comentari per a cada camp de la interfície Videojoc, URLs d'imatge reals i dades hardcodejades dins de Tarjeta i Estadistiques.
 - Part modificada: a la secció 3 de L1 s'esmenta input.required(); això ja no s'usa. Ara el pare passa les dades amb @Input() (Part 5).
 
 ## Part 3 - @for
 - He usat IA? Sí
-- Prompt: "Implementa la Part 3: @for amb track, $index, $first i $last, mínim 6 ítems i layout en graella."
+- Prompt: "Necessito fer la Part 3 i entendre com funciona. Vull saber com s'usa @for amb track, $index, $first i $last, per què calen mínim 6 ítems i com es fa el layout en graella."
 - Part usada directament: el @for amb track joc.id, el número d'ordre amb $index i l'emoji amb $first/$last. He afegit el camp id a la interfície perquè track en necessita un.
 - Part modificada: la graella amb CSS grid en lloc de flexbox.
 - Reflexions:
@@ -46,7 +46,7 @@ ChatGPT ha servit com a eina d'ajuda per entendre Angular, corregir errors i mos
 
 ## Part 4 - @if
 - He usat IA? Sí
-- Prompt: "Implementa la Part 4: 3 @if amb un @else i com a mínim 2 classes CSS d'estat."
+- Prompt: "Necessito fer la Part 4 i entendre com funciona. Vull saber com s'usa @if amb @else, com puc fer 3 usos i com es fan 2 classes CSS d'estat."
 - 3 usos de @if al meu projecte:
   1. videojoc.disponible - mostra "Disponible" (verd) o, amb @else, "Esgotat" (vermell).
   2. videojoc.puntuacio >= 8.5 - mostra la badge "Destacat".
@@ -56,7 +56,7 @@ ChatGPT ha servit com a eina d'ajuda per entendre Angular, corregir errors i mos
 
 ## Part 5 - @Input i @Output
 - He usat IA? Sí
-- Prompt: "Implementa la Part 5: @Input() videojoc! a Tarjeta, un @Output() amb EventEmitter i que el pare mostri el detall amb un @if."
+- Prompt: "Necessito fer la Part 5 i entendre com funciona. Vull saber com passa les dades el pare al fill amb @Input(), com avisa el fill al pare amb @Output() i EventEmitter, i com mostrar el detall amb un @if."
 - @Output triat: videojocSeleccionat - té sentit en un catàleg: l'usuari prem "Veure detall" i el pare mostra el detall d'aquell joc.
 - Part usada directament: @Input() videojoc!, @Output() amb EventEmitter, el mètode onVideojocSeleccionat al pare i la secció de detall amb @if. Estadistiques també rep la llista amb @Input().
 - Reflexions:
