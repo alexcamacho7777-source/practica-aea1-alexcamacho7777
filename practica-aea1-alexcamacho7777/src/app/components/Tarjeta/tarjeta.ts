@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Videojoc } from '../../interfaces/videojoc';
 
 @Component({
@@ -7,21 +7,34 @@ import { Videojoc } from '../../interfaces/videojoc';
   styleUrl: './tarjeta.css',
 })
 export class Tarjeta {
-  // Dades que rep del component pare (ja no estan hardcodejades aquí)
-  videojoc = input.required<Videojoc>();
+  // Part 5: el pare passa el videojoc amb property binding [videojoc]="joc".
+  @Input() videojoc!: Videojoc;
 
-  // Retorna el preu amb 2 decimals i el símbol de l'euro ("Gratuït" si val 0).
-  preuText = computed(() => {
-    const preu = this.videojoc().preu;
-    return preu === 0 ? 'Gratuït' : preu.toFixed(2) + ' €';
-  });
+  // Part 5: el fill avisa el pare quan l'usuari prem el botó de detall.
+  @Output() videojocSeleccionat = new EventEmitter<Videojoc>();
+
+  // Emet el videojoc d'aquesta targeta cap al component pare.
+  seleccionar(): void {
+    this.videojocSeleccionat.emit(this.videojoc);
+  }
+
+  // Retorna el preu amb el símbol de l'euro.
+  get preuText(): string {
+    return this.videojoc.preu + ' €';
+  }
 
   // Indica si el joc està disponible.
-  estat = computed(() => (this.videojoc().disponible ? 'Disponible' : 'No disponible'));
+  get estat(): string {
+    return this.videojoc.disponible ? 'Disponible' : 'No disponible';
+  }
 
   // Calcula el preu del videojoc amb un 21% d'IVA.
-  preuAmbIVA = computed(() => (this.videojoc().preu * 1.21).toFixed(2));
+  get preuAmbIVA(): number {
+    return this.videojoc.preu * 1.21;
+  }
 
   // Combina la puntuació i el gènere per crear una etiqueta pròpia.
-  etiqueta = computed(() => `${this.videojoc().genere} - Nota: ${this.videojoc().puntuacio}`);
+  get etiqueta(): string {
+    return this.videojoc.genere + ' - Nota: ' + this.videojoc.puntuacio;
+  }
 }

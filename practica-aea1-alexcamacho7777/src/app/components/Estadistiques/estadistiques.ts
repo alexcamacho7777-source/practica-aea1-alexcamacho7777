@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Videojoc } from '../../interfaces/videojoc';
 
 @Component({
@@ -7,22 +7,28 @@ import { Videojoc } from '../../interfaces/videojoc';
   styleUrl: './estadistiques.css',
 })
 export class Estadistiques {
-  // Llista de videojocs que rep del component pare
-  videojocs = input.required<Videojoc[]>();
+  // Part 5: llista de videojocs que rep del component pare.
+  @Input() videojocs: Videojoc[] = [];
 
-  // Calcula quants videojocs hi ha al catàleg.
-  totalVideojocs = computed(() => this.videojocs().length);
+  // Retorna quants videojocs hi ha al catàleg.
+  get totalVideojocs(): number {
+    return this.videojocs.length;
+  }
 
   // Retorna el nom del primer videojoc de la llista.
-  primerVideojoc = computed(() => this.videojocs()[0]?.nom ?? '-');
+  get primerVideojoc(): string {
+    return this.videojocs.length > 0 ? this.videojocs[0].nom : '-';
+  }
 
-  // Quants videojocs estan disponibles.
-  totalDisponibles = computed(() => this.videojocs().filter((v) => v.disponible).length);
+  // Retorna quants videojocs estan disponibles.
+  get totalDisponibles(): number {
+    return this.videojocs.filter((v) => v.disponible).length;
+  }
 
-  // Puntuació mitjana del catàleg.
-  puntuacioMitjana = computed(() => {
-    const llista = this.videojocs();
-    if (llista.length === 0) return '0.0';
-    return (llista.reduce((suma, v) => suma + v.puntuacio, 0) / llista.length).toFixed(1);
-  });
+  // Retorna la puntuació mitjana del catàleg amb 1 decimal.
+  get puntuacioMitjana(): string {
+    if (this.videojocs.length === 0) return '0.0';
+    const suma = this.videojocs.reduce((total, v) => total + v.puntuacio, 0);
+    return (suma / this.videojocs.length).toFixed(1);
+  }
 }

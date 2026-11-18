@@ -1,8 +1,34 @@
 <app-capcalera />
 <main>
+  <!-- @if de la Part 4: mostra o amaga el detall del videojoc seleccionat -->
+  @if (videojocSeleccionat) {
+    <section class="detall">
+      <h2>Detall: {{ videojocSeleccionat.nom }}</h2>
+      <p>
+        {{ videojocSeleccionat.genere }} · {{ videojocSeleccionat.plataforma }} ·
+        {{ videojocSeleccionat.anyLlancament }}
+      </p>
+      <p>Puntuació: {{ videojocSeleccionat.puntuacio }}/10 · Preu: {{ videojocSeleccionat.preu }} €</p>
+      <button type="button" (click)="tancarDetall()">Tancar</button>
+    </section>
+  }
+
   <section class="llista">
-    @for (joc of videojocs; track joc.nom) {
-      <app-tarjeta [videojoc]="joc" />
+    <!-- track joc.id: Angular identifica cada element pel seu id -->
+    @for (joc of videojocs; track joc.id; let i = $index; let primer = $first; let ultim = $last) {
+      <article class="element" [class.primer]="primer" [class.ultim]="ultim">
+        <p class="ordre">
+          #{{ i + 1 }} de {{ videojocs.length }}
+          @if (primer) {
+            <span> 🥇 Primer</span>
+          }
+          @if (ultim) {
+            <span> 🏁 Últim</span>
+          }
+        </p>
+        <!-- Property binding [videojoc] (@Input) i event binding (videojocSeleccionat) (@Output) -->
+        <app-tarjeta [videojoc]="joc" (videojocSeleccionat)="onVideojocSeleccionat($event)" />
+      </article>
     }
   </section>
 

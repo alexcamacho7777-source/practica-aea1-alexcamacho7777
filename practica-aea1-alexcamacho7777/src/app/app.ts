@@ -33,7 +33,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2026,
-      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/2669320/header.jpg',
+      imatgeUrl: 'https://placehold.co/460x215/png?text=EA+Sports+FC+27',
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2013,
-      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/271590/header.jpg',
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ export class App {
       plataforma: 'Consoles',
       disponible: false,
       anyLlancament: 2023,
-      imatgeUrl: 'https://upload.wikimedia.org/wikipedia/en/f/fb/The_Legend_of_Zelda_Tears_of_the_Kingdom_cover.jpg',
+      imatgeUrl: 'https://upload.wikimedia.org/wikipedia/en/c/c6/The_Legend_of_Zelda_Breath_of_the_Wild.jpg',
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: true,
       anyLlancament: 2015,
-      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/252950/header.jpg',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/252950/header.jpg',
     },
     {
       id: 6,
@@ -77,7 +77,20 @@ export class App {
       plataforma: 'PC, Consoles',
       disponible: false,
       anyLlancament: 2018,
-      imatgeUrl: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
+      imatgeUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg',
     },
   ];
+
+  // Videojoc seleccionat per l'usuari (null si no n'hi ha cap)
+  videojocSeleccionat: Videojoc | null = null;
+
+  // Part 5: s'executa quan el fill emet l'event videojocSeleccionat.
+  onVideojocSeleccionat(joc: Videojoc): void {
+    this.videojocSeleccionat = joc;
+  }
+
+  // Tanca la secció de detall.
+  tancarDetall(): void {
+    this.videojocSeleccionat = null;
+  }
 }

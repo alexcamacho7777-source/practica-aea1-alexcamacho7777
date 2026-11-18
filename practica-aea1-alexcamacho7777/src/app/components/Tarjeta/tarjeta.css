@@ -25,3 +25,30 @@ p {
   color: #c62828;
   font-weight: bold;
 }
+
+img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  margin-right: 6px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.destacat {
+  background-color: #fff3cd;
+  color: #8a6d00;
+}
+
+.classic {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}

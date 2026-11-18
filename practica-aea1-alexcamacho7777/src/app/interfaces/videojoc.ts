@@ -1,4 +1,4 @@
-// Interficie Videojoc, representa cada videojoc i les seves propietats
+// Interfície Videojoc: representa cada videojoc del catàleg i les seves propietats.
 
 export interface Videojoc {
   // Identificador únic del videojoc (el fem servir al track del @for)
